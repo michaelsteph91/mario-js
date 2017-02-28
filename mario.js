@@ -10,5 +10,3 @@ function printPyramid(height) {
 
 var x = prompt("Enter a Height");
 printPyramid(x);
-
-}
