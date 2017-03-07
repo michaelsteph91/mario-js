@@ -12,13 +12,16 @@ function determineHeightAndThenDrawPyramid() {
 
     // TODO 3
     // figure out the height the user typed (replace the "5" below)
-    heightStr = "5";
+    var usr_height = document.getElementById("height").value;
+
+    heightStr = usr_height;
 
     // here we convert the string to an int
     height = parseInt(heightStr);
 
     // TODO 2
     // draw the pyramid with the given height
+    drawPyramid(height);
 
 }
 
@@ -35,9 +38,8 @@ function determineHeightAndThenDrawPyramid() {
  */
  function drawPyramid(height) {
 
-     // TODO 4
-     // before drawing, clear the old content
-
+     var cont = document.getElementById("pyramid");
+     cont.innerText = "";
 
      // for each row....
      for (var row = 0; row < height; row++) {
