@@ -20,6 +20,10 @@ formElem.onsubmit = function(event) {
     // TODO 1
     // if they didn't type anything at all, give a different error message,
     // something like "Please provide a height"
+    if (heightStr.length < 1){
+        displayError("Please provide a height.");
+        return;
+    }
 
 
     // convert the string to an int
@@ -62,8 +66,12 @@ function displayError(message) {
  * Undisplays the error message and removes the red CSS style
  */
 function clearError(message) {
+    //document.getElementById("error-message").innerHTML = "";
     // TODO 3
+    message = ""
     // implement this function.
+    heightElem.className = "invalid-field";
+    document.querySelector(".error-message").innerHTML = message;
 }
 
 
